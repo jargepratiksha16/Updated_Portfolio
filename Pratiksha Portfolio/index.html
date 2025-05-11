@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pratiksha Jarge | </title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Portfolio.</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" onclick="location.reload()">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="mailto:pratikshajarge0@gmail.com">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h3>Hi, Myself</h3>
+      <h1>Pratiksha Jarge</h1>
+      <h2>And I'm a <span class="typed-text"></span></h2>
+      <p>Passionate About Coding.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <a href="#" class="btn">Download CV</a>
+    </div>
+    <div class="hero-img">
+      <img src="images/profile1.avif" alt="Pratiksha Jarge" />
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      I am Pratiksha Jarge, a passionate Frontend Developer who loves crafting clean, responsive, and user-friendly interfaces. I believe in continuous learning and building meaningful digital experiences.
+    </p>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A personal website to showcase my skills, resume, and projects using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project">
+        <h3>Banking Management System</h3>
+        <p>A basic front-end banking system to manage customers and transactions using HTML, CSS, and JS.</p>
+      </div>
+      <div class="project">
+        <h3>To-Do App</h3>
+        <p>A simple and effective To-Do app built with JavaScript, featuring task management and local storage.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const typedText = document.querySelector(".typed-text");
+    const textArray = ["Frontend Developer"];
+    let index = 0, charIndex = 0;
+    function type() {
+      if (charIndex < textArray[index].length) {
+        typedText.textContent += textArray[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      }
+    }
+    window.onload = type;
+
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

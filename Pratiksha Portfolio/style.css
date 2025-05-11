@@ -1,0 +1,150 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0c2c;
+  color: white;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  align-items: center;
+  background-color: #111339;
+  position: relative;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.nav-links li a:hover {
+  color: #00bfff;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 10%;
+  align-items: center;
+}
+.hero-text {
+  max-width: 600px;
+}
+.hero-text h3 {
+  font-size: 24px;
+}
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+.hero-text h2 {
+  font-size: 28px;
+  color: #00bfff;
+}
+.hero-text p {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #ccc;
+}
+.social-icons a {
+  margin-right: 15px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: #00bfff;
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 2px solid #00bfff;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #00bfff;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #00bfff;
+  color: #111339;
+}
+.hero-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.about, .projects {
+  padding: 60px 10%;
+  background-color: #0e1040;
+}
+.about h2, .projects h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #00bfff;
+}
+.about p, .project p {
+  color: #ccc;
+  line-height: 1.6;
+}
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.project {
+  background-color: #1a1c50;
+  padding: 20px;
+  border-radius: 10px;
+}
+.project h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111339;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img {
+    margin-top: 30px;
+  }
+}
